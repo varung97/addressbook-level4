@@ -75,7 +75,6 @@ Likeliness | As a... | I want to... | So that I can...
 `L` | Advanced User | Use shorter forms of commands | Edit my to do list faster
 `L` | Advanced User | Edit the storage file | Make changes without having to go through the manager
 `U` | Advanced User | Declare my own names for commands | Personalise the experience and make it faster
-`*` | user with many persons in the address book | sort persons by name | locate a person easily
 
 
 ## Appendix B : Use Cases
