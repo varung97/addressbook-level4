@@ -72,9 +72,8 @@ Likeliness | As a... | I want to... | So that I can...
 `L` | User | Redo operation(s) | Redo a change that had been undone
 `L` | User | Search for empty slots (within a given time frame) | Decide when to schedule a task
 `L` | User | Integrate with third-party applications like GCalendar | Access my tasks on another platform too
-`L` | Advanced User | Use shorter forms of commands | Edit my to do list faster
 `L` | Advanced User | Edit the storage file | Make changes without having to go through the manager
-`U` | Advanced User | Declare my own names for commands | Personalise the experience and make it faster
+`L` | Advanced User | Declare my own names for commands | Personalise the experience and make it faster
 
 
 ## Appendix B : Use Cases
