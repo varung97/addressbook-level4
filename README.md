@@ -8,7 +8,7 @@
 * This is a desktop Task Manager application. It has a GUI but most of the user interactions happen using 
   a CLI (Command Line Interface).
 * This revolutionary application allows you full control over the day ahead without your fingers ever leaving the keyboard!
-* Add, modify, search, tick off and get reminded about upcoming tasks, all from the safety of your keyboard.
+* Add, modify, search, tick off and get reminded about upcoming tasks, all without touching the mouse.
   
 #### Site Map
 * [User Guide](docs/UserGuide.md) 
