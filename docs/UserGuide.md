@@ -16,8 +16,8 @@
 1. Download the latest `taskmanager.jar` from the [releases](../../../releases) tab.
 2. Copy the file to the folder you want to use as the home folder for your Task Manager.
 3. Double-click the file to start the app. The GUI should appear in a few seconds.
-5. To communicate with your task manager, type a command in the command box and press <kbd>Enter</kbd>.
-6. Some commands to get you started:
+4. To communicate with your task manager, type a command in the command box and press <kbd>Enter</kbd>
+5. Some commands to get you started:
   * **`#help`** : Brings up the help page.
   * **`#add`**` Dinner with Mum` : Adds a task `Dinner with Mum` to your list.
   * **`#search`** : Lists all the tasks.
