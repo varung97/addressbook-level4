@@ -40,18 +40,41 @@
 
 
 ## Appendix A : User Stories
+Likeliness: Likely - `L`, Unlikely - `U`
 
-Priorities: High (must have) - `* * *`, Medium (nice to have)  - `* *`,  Low (unlikely to have) - `*`
 
-
-Priority | As a ... | I want to ... | So that I can...
+Likeliness | As a... | I want to... | So that I can...
 -------- | :-------- | :--------- | :-----------
-`* * *` | new user | see usage instructions | refer to instructions when I forget how to use the App
-`* * *` | user | add a new person |
-`* * *` | user | delete a person | remove entries that I no longer need
-`* * *` | user | find a person by name | locate details of persons without having to go through the entire list
-`* *` | user | hide private contact details by default | minimize chance of someone else seeing them by accident
-`*` | user with many persons in the address book | sort persons by name | locate a person easily
+`L` | New user | View the procedure of creating a task | Learn how to create a task first
+`L` | New user | View info about a command | Learn how to use these commands
+`L` | User | Add tasks with a description and a specific deadline | Set deadlines for tasks
+`L` | User | Add tasks with description, start time and end time | Create events in the calendar
+`L` | User | Add tasks with only a description | Set tasks that need to be completed at some point of time
+`L` | User | Modify a task | Update deadlines and descriptions
+`L` | User | Delete a task | Reflect my not having to do a task anymore in my to do list
+`L` | User | Tick off a task | Record that this task is complete
+`L` | User | Search for (a) task(s) | Find a task (and maybe edit it)
+`L` | User | See upcoming tasks | Decide what to do next
+`L` | User | List floating tasks | See whether I want to complete a floating task next
+`L` | User | Assign priority to tasks | Gauge which task should be done next
+`L` | User | Sort upcoming tasks by priority | Make the decision of which task to complete next faster
+`L` | User | See tasks in a specific period of time | See what has been scheduled for a certain period
+`L` | User | See upcoming tasks up until a specified time | See less / more upcoming tasks according to the time frame set by the user
+`L` | User | Block multiple slots for a task | Choose later which slot I want to assign this task to and keep the selected slots free for that task
+`L` | User | Decide slot for an item blocking multiple slots | Free up the other slots for other tasks
+`L` | User | Use a keyboard shortcut to activate the manager | Speed up my workflow
+`L` | User | Declare tasks that have to be done after a certain time | Track these tasks but do not remind after the certain date that is input by user
+`L` | User | Interact with the manager using a CLI and keys | Get rid of the need for a mouse
+`L` | User | Receive emails/notifications about pressing deadlines | Be reminded to complete these tasks
+`L` | User | Undo operation(s) | Remove a mistake
+`L` | User | Specify a folder as the storage area | User may be accessing the tasks from multiple computers using cloud storage, or open them from a local storage.
+`L` | User | Declare recurring tasks | Remove the need to enter these tasks multiple times
+`L` | User | Redo operation(s) | Redo a change that had been undone
+`L` | User | Search for empty slots (within a given time frame) | Decide when to schedule a task
+`L` | User | Integrate with third-party applications like GCalendar | Access my tasks on another platform too
+`L` | Advanced User | Use shorter forms of commands | Edit my to do list faster
+`L` | Advanced User | Edit the storage file | Make changes without having to go through the manager
+`U` | Advanced User | Declare my own names for commands | Personalise the experience and make it faster
 
 
 ## Appendix B : Use Cases
