@@ -5,7 +5,7 @@ import seedu.address.commons.exceptions.IllegalValueException;
 
 /**
  * Represents a Task's address in the address book.
- * Guarantees: immutable; is valid as declared in {@link #isValidAddress(String)}
+ * Guarantees: immutable; is valid as declared in {@link #isValidPriority(String)}
  */
 public class Priority extends TaskProperty {
     /**
@@ -19,7 +19,7 @@ public class Priority extends TaskProperty {
     
     @Override
     protected String getMessageConstraints() {
-        return "Task prioties should be either low, med or high";
+        return "Task priorities should be either low, med or high";
     }
     
     @Override
