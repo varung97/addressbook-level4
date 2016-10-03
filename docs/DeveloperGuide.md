@@ -78,16 +78,15 @@ Likeliness | As a... | I want to... | So that I can...
 
 ## Appendix B : Use Cases
 
-(For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
 
-#### Use case: Delete person
+#### Use case: Delete task
 
 **MSS**
 
-1. User requests to list persons
-2. AddressBook shows a list of persons
-3. User requests to delete a specific person in the list
-4. AddressBook deletes the person <br>
+1. User requests to list upcoming tasks
+2. Task Manager shows a list of upcoming tasks
+3. User requests to delete a specific task in the list
+4. Task Manager deletes the task <br>
 Use case ends.
 
 **Extensions**
@@ -98,9 +97,137 @@ Use case ends.
 
 3a. The given index is invalid
 
-> 3a1. AddressBook shows an error message <br>
+> 3a1. Task Manager shows an error message <br>
   Use case resumes at step 2
 
+#### Use case: Add task
+
+**MSS**
+
+1. User wants to add a task into the Task Manager
+2. Task Manager recieves a set of information(event, time, person and others) and adds it into the list <br>
+Use case ends.
+
+**Extensions**
+2a. Task Manager get empty information
+
+> Use case ends
+
+2b. Totally same set of information recieved by Task Manager
+
+> 2b1. Delet it with a notice to the user <br>
+  Use case ends
+ 
+#### Use case: View instruction
+
+**MSS**
+
+1. User wants to view the instruction of creating a new task
+2. Task Manager guides the user to finish a new task creating
+3. Task Manager asks for reflection about whether the user understands
+
+**Extensions**
+2a. The progress breaks in the middle.
+
+> Use case ends
+
+3a. User reflected with doublts
+
+> 3a1. Redo the step 2 again.
+  Use case ends
+  
+#### Use case: View command meanings
+
+**MSS**
+
+1. User wants to view the commonds' explainations
+2. Task Manager shows a list of practical commands
+3. User wants the explainations for some specific commands
+4. Task Manager shows the explainations for those commands
+
+**Extensions**
+3a. The given index is invalid
+
+> 3a1. Task Manager shows an error message <br>
+  Use case resumes at step 2
+
+#### Use case: Modify task
+
+**MSS**
+
+1. User wants the list of tasks
+2. Task Manager shows a list of tasks
+3. Users wants to modify the information of a specific task
+4. Task Manager modify the corresponding information
+
+**Extensions**
+2a. The list is empty
+
+> Use case ends
+
+3a. The given index or information is Invalid
+
+> 3a1. Task Manager shows an error message <br>
+  Use case resumes at step 2
+  
+#### Use case: Assign task priority
+
+**MSS**
+
+1. User wants the list of upcoming tasks
+2. Task Manager shows the list of upcoming tasks
+3. User wansts to set a specific task as top
+4. Task Manager removes the task to the top of the list <br>
+
+**Extensions**
+
+2a. The list is empty
+
+> Use canse ends
+
+3a. The given index is invalid
+
+> 3a1. Task Manager shows an error message <br>
+  Use case resumes at step 2
+
+4a. There is already a highest priority task
+
+> 4a1. Task Manager set the new event as the top and noticed the user
+  Use case ends
+  
+#### Use case: View tasks within a time
+
+**MSS**
+1. User wants to view the list of tasks
+2. Task Manager shows the list of tasks
+3. User wants to see the tasks within a specific time period
+4. Task Manager shows the user the tasks within the specific time period <br>
+
+**Extensions**
+2a. The list is empty
+
+> Use canse ends
+
+3a. The time given is invalid
+
+> Task Manager shows an error message <br>
+  Use case resumes at step 2
+  
+4a. No tasks in such time period
+
+> Task Manager shows that it is empty <br>
+  Use case rusumes at step 2
+  
+#### Use case: View upcoming tasks
+
+**MSS**
+1. User wants to view the upcoming tasks.
+2. Task Manager shows the user a list of upcoming tasks.
+
+**Extension**
+1. The list is empty
+
+> Use case ends with a notice
 
 ## Appendix C : Non Functional Requirements
 
