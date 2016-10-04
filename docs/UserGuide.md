@@ -8,8 +8,7 @@
 * [Data Formats](#data-formats)
 * [Cheat Sheet](#cheat-sheet)
 
-## About
-
+<br>
 ## Quick Start
 
 0. Ensure you have Java version `1.8.0_60` or later installed in your Computer.<br>
@@ -30,6 +29,7 @@
 
   Don't forget the `#` before the commands!
 
+<br>
 ## Features
 
 ### Overview
@@ -38,10 +38,12 @@ This means that the primary commands are used in conjunction with extensions to 
 For example, you could search for all tasks to be done before 2pm 1st Oct 2016 by typing `#search #before 2pm 1 Oct 2016` (Note the use of `#` before keywords)
 > The order of extensions is not fixed.
 
+<br>
 ### Notation used:
 `[date]`: Means date is an optional argument<br>
 `<hour>`: Replace by the actual hour
 
+<br>
 ### Primary Commands
 
 <a id="help"></a>
@@ -59,6 +61,7 @@ Examples:
   * `#help #search`
 
 
+<br>
 <a id="add"></a>
 #### Adding a task to the list: `#add`
 _The most basic command... let's you start adding tasks to the manager._<br>
@@ -75,6 +78,7 @@ Examples:
   * `#add Pay bills #after 11:59pm 20 Aug 2030`
 
 
+<br>
 <a id="search"></a>
 #### Searching for tasks: `#search`
 _Forgotten when you arranged that date? Use search!_<br>
@@ -95,6 +99,7 @@ Examples:
   * `#search #after 1am 1 Oct #venue Avalon`
 
 
+<br>
 <a id="edit"></a>
 #### Editing tasks: `#edit`
 _Decided to postpone your homework? We let you do that too ;)_<br>
@@ -110,6 +115,7 @@ Examples:
   * `#edit 1 Dinner with Guinevere #venue Under the stars`
 
 
+<br>
 <a id="delete"></a>
 #### Deleting tasks: `#delete`
 _Added a task you don't need? Fear not, for delete is here._<br>
@@ -122,6 +128,7 @@ Examples:
   * `#delete 3`
 
 
+<br>
 <a id="done"></a>
 #### Ticking off tasks: `#done`
 _Perhaps the most satisfying command! Let's you mark a task as done._<br>
@@ -134,6 +141,7 @@ Examples:
   * `#done 3`
 
 
+<br>
 <a id="undo"></a>
 #### Undoing previous changes: `#undo`
 _Made a mistake? Go back in time using this command!_<br>
@@ -146,6 +154,7 @@ Examples:
   * `#undo 3`
 
 
+<br>
 <a id="redo"></a>
 #### Redoing undone changes: `#redo`
 _Made a mistake correcting a mistake? Use redo before you confuse yourself any further._<br>
@@ -158,6 +167,7 @@ Examples:
   * `#redo 3`
 
 
+<br>
 <a id="exit"></a>
 #### Exiting the task manager: `#exit`
 _This command closes the task manager. Hope to see you back soon!_<br>
@@ -167,6 +177,7 @@ Examples:
   * `#exit`
 
 
+<br>
 <a id="storage"></a>
 #### Specifying storage folder: `#storage`
 _Allows you to specify where the storage file should be kept._<br>
@@ -180,6 +191,7 @@ Examples:
   * `#storage /Dropbox/MyTodoList/Storage`
 
 
+<br>
 <a id="alias"></a>
 #### Changing command names: `#alias`
 _Prefer shorter or more personalised commands? Alias is here to help you change command names._<br>
@@ -191,6 +203,7 @@ Examples:
   * `#alias #undo #u`
 
 
+<br>
 <a id="commandchar"></a>
 #### Changing command character: `#commandchar`
 _Similar to aliasing, this lets you personalise the command character itself._<br>
@@ -205,6 +218,7 @@ Examples:
     `-add Dinner with Mum`
 
 
+<br>
 <a id="email"></a>
 #### Specify your email: `#email`
 _Supply the task manager with your email (for reminders)_<br>
@@ -214,11 +228,13 @@ Examples:
   * `#email mileycyrus@weird.com`
 
 
+<br>
 #### Saving the data
 Tasks are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.
 
 
+<br>
 ### Extensions
 
 <a id="at"></a>
@@ -237,6 +253,7 @@ Examples:
   * `#add Meeting with Boss #at 11am 3 Oct, 2pm 5 Oct`
 
 
+<br>
 <a id="before"></a>
 #### Before a certain time: `#before`
 _Marks a task that must be done before a certain time._<br>
@@ -251,6 +268,7 @@ Examples:
   * `#search #before 5pm 20 Oct`
 
 
+<br>
 <a id="after"></a>
 #### After a certain time: `#after`
 _Marks a task that should be done after a certain time._<br>
@@ -265,6 +283,7 @@ Examples:
   * `#search #after 11am`
 
 
+<br>
 <a id="duration"></a>
 #### For a certain duration: `#duration`
 _Allows you to specify how long the task will last._<br>
@@ -279,6 +298,7 @@ Examples:
   * `#search #duration 3 hrs`
 
 
+<br>
 <a id="remind"></a>
 #### Getting reminders: `#remind`
 _Feeling forgetful? Get reminders using this command._<br>
@@ -294,6 +314,7 @@ Examples:
   * `#add Complete Assignment #remind 7am 10 Oct, 7am 11 Oct`
 
 
+<br>
 <a id="venue"></a>
 #### At a Venue: `#venue`
 _Going to university and ended up at the mall? Remember your destination with this extension._<br>
@@ -307,6 +328,7 @@ Examples:
   * `#search #venue Avalon`
 
 
+<br>
 <a id="repeat"></a>
 #### Recurring Task: `#repeatevery`
 _Saves you from having to type in a task multiple times._<br>
@@ -320,6 +342,7 @@ Examples:
   * `#edit 1 #repeatevery 1 months`
 
 
+<br>
 <a id="priority"></a>
 #### Priority level for tasks: `#priority`
 _Assign a priority level to tasks._<br>
@@ -335,6 +358,7 @@ Examples:
   * `#search #priority high`
 
 
+<br>
 <a id="sort"></a>
 #### Sort by priority level: `#sort`
 _Sort your search results by priority._<br>
@@ -349,6 +373,7 @@ Examples:
   * `#sort` (sorts the currently displayed tasks)
 
 
+<br>
 <a id="float"></a>
 #### Search for floating tasks: `#float`
 _Let's you search for floating tasks._<br>
@@ -363,6 +388,7 @@ Examples:
   * `#search #float #priority high`
 
 
+<br>
 ## Data Formats
 
 <a id="time-date"></a>
@@ -376,6 +402,7 @@ Examples:
   * `3 Oct` (Stored as `12:01am 3 Oct`)
   * `1pm` (Stored as `1pm <today's date>`)
 
+<br>
 <a id="time"></a>
 * `time`: `<hour>[:<minutes>]<am/pm>`<br>
   Examples:
@@ -383,18 +410,21 @@ Examples:
   * `3:45am`
   * `1:00pm`
 
+<br>
 <a id="hour"></a>
 * `hour`: `<number 1-12>`<br>
   Examples:
   * `7`
   * `12`
 
+<br>
 <a id="minutes"></a>
 * `minutes`: `<2-digit number 00-59>`<br>
   Examples:
   * `03`
   * `58`
 
+<br>
 <a id="date"></a>
 * `date`: `<day> <month> [<year>]`<br>
   > Year defaults to current year if not specified
@@ -404,12 +434,14 @@ Examples:
   * `5 Nov`
   * `1 Jan 2017`
 
+<br>
 <a id="day"></a>
 * `day`: `<number 1-31>`<br>
   Examples:
   * `1`
   * `31`
 
+<br>
 <a id="month"></a>
 * `month`: `<3-letter abbreviation>`<br>
   Examples:
@@ -417,6 +449,7 @@ Examples:
   * `Mar`
   * `Sep`
 
+<br>
 <a id="year"></a>
 * `year`: `4-digit integer`<br>
   Examples:
@@ -424,6 +457,7 @@ Examples:
   * `2020`
 
 
+<br>
 ## Cheat Sheet
 
 Type | Command | Format
