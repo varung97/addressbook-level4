@@ -1,11 +1,10 @@
 package seedu.address.model.task;
 
-
 import seedu.address.commons.exceptions.IllegalValueException;
 
 /**
- * Represents a Task's address in the address book.
- * Guarantees: immutable; is valid as declared in {@link #isValidPriority(String)}
+ * Represents a Task's priority in the address book.
+ * Guarantees: immutable; is valid as declared in {@link #isValid(String)}
  */
 public class Priority extends TaskProperty {
     /**

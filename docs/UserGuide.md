@@ -12,7 +12,7 @@
 0. Ensure you have Java version `1.8.0_60` or later installed in your Computer.<br>
    > Having any Java 8 version is not enough. <br>
    This app will not work with earlier versions of Java 8.
-   
+
 1. Download the latest `taskmanager.jar` from the [releases](../../../releases) tab.
 2. Copy the file to the folder you want to use as the home folder for your Task Manager.
 3. Double-click the file to start the app. The GUI should appear in a few seconds.
@@ -183,7 +183,7 @@ Examples:
   * `#exit`
 
 
-#### Saving the data 
+#### Saving the data
 Tasks are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.
 
@@ -356,7 +356,7 @@ Examples:
 <a id="date"></a>
 * `date`: `<day> <month> [<year>]`<br>
   > Year defaults to current year if not specified
-  
+
   Examples:
   * `5 Oct`
   * `5 Nov`

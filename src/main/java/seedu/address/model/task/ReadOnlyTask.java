@@ -41,7 +41,7 @@ public interface ReadOnlyTask {
                 .append(getPhone())
                 .append(" Email: ")
                 .append(getEmail())
-                .append(" Address: ")
+                .append(" Priority: ")
                 .append(getPriority())
                 .append(" Tags: ");
         getTags().forEach(builder::append);
