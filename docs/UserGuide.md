@@ -1,6 +1,5 @@
 # User Guide
 
-* [Introduction](#introduction)
 * [Quick Start](#quick-start)
 * [Features](#features)
   * [Primary Commands](#primary-commands)
