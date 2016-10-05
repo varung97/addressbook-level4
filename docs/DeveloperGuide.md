@@ -1,4 +1,4 @@
-# Developer Guide 
+# Developer Guide
 
 * [Setting Up](#setting-up)
 * [Appendix A: User Stories](#appendix-a--user-stories)
@@ -16,7 +16,7 @@
 
     > Having any Java 8 version is not enough. <br>
     This app will not work with earlier versions of Java 8.
-    
+
 2. **Eclipse** IDE
 3. **e(fx)clipse** plugin for Eclipse (Do the steps 2 onwards given in
    [this page](http://www.eclipse.org/efxclipse/install.html#for-the-ambitious))
@@ -26,7 +26,7 @@
 #### Importing the project into Eclipse
 
 0. Fork this repo, and clone the fork to your computer
-1. Open Eclipse (Note: Ensure you have installed the **e(fx)clipse** and **buildship** plugins as given 
+1. Open Eclipse (Note: Ensure you have installed the **e(fx)clipse** and **buildship** plugins as given
    in the prerequisites above)
 2. Click `File` > `Import`
 3. Click `Gradle` > `Gradle Project` > `Next` > `Next`
@@ -37,18 +37,97 @@
   > * Depending on your connection speed and server load, it can even take up to 30 minutes for the set up to finish
       (This is because Gradle downloads library files from servers during the project set up process)
   > * If Eclipse auto-changed any settings files during the import process, you can discard those changes.
-  
-#### Troubleshooting
+
+#### Troubleshooting project setup
 
 **Problem: Eclipse reports compile errors after new commits are pulled from Git**
-* Reason: Eclipse fails to recognize new files that appeared due to the Git pull. 
-* Solution: Refresh the project in Eclipse:<br> 
+* Reason: Eclipse fails to recognize new files that appeared due to the Git pull.
+* Solution: Refresh the project in Eclipse:<br>
   Right click on the project (in Eclipse package explorer), choose `Gradle` -> `Refresh Gradle Project`.
-  
+
 **Problem: Eclipse reports some required libraries missing**
-* Reason: Required libraries may not have been downloaded during the project import. 
+* Reason: Required libraries may not have been downloaded during the project import.
 * Solution: [Run tests using Gardle](UsingGradle.md) once (to refresh the libraries).
- 
+
+
+### Configuration
+
+Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file
+(default: `config.json`).
+
+
+## Testing
+
+Tests can be found in the `./src/test/java` folder.
+
+**In Eclipse**:
+* To run all tests, right-click on the `src/test/java` folder and choose
+  `Run as` > `JUnit Test`
+* To run a subset of tests, you can right-click on a test package, test class, or a test and choose
+  to run as a JUnit test.
+
+**Using Gradle**:
+* See [UsingGradle.md](UsingGradle.md) for how to run tests using Gradle.
+
+We have two types of tests:
+
+1. **GUI Tests** - These are _System Tests_ that test the entire App by simulating user actions on the GUI.
+   These are in the `guitests` package.
+
+2. **Non-GUI Tests** - These are tests not involving the GUI. They include,
+   1. _Unit tests_ targeting the lowest level methods/classes. <br>
+      e.g. `seedu.manager.commons.UrlUtilTest`
+   2. _Integration tests_ that are checking the integration of multiple code units
+     (those code units are assumed to be working).<br>
+      e.g. `seedu.manager.storage.StorageManagerTest`
+   3. Hybrids of unit and integration tests. These test are checking multiple code units as well as
+      how the are connected together.<br>
+      e.g. `seedu.manager.logic.LogicManagerTest`
+
+**Headless GUI Testing** :
+Thanks to the [TestFX](https://github.com/TestFX/TestFX) library we use,
+ our GUI tests can be run in the _headless_ mode.
+ In the headless mode, GUI tests do not show up on the screen.
+ That means the developer can do other things on the Computer while the tests are running.<br>
+ See [UsingGradle.md](UsingGradle.md#running-tests) to learn how to run tests in headless mode.
+
+#### Troubleshooting tests
+ **Problem: Tests fail because NullPointException when AssertionError is expected**
+ * Reason: Assertions are not enabled for JUnit tests.
+   This can happen if you are not using a recent Eclipse version (i.e. _Neon_ or later)
+ * Solution: Enable assertions in JUnit tests as described
+   [here](http://stackoverflow.com/questions/2522897/eclipse-junit-ea-vm-option). <br>
+   Delete run configurations created when you ran tests earlier.
+
+
+## Dev Ops
+
+### Build Automation
+
+See [UsingGradle.md](UsingGradle.md) to learn how to use Gradle for build automation.
+
+### Continuous Integration
+
+We use [Travis CI](https://travis-ci.org/) to perform _Continuous Integration_ on our projects.
+See [UsingTravis.md](UsingTravis.md) for more details.
+
+### Making a Release
+
+Here are the steps to create a new release.
+
+ 1. Generate a JAR file [using Gradle](UsingGradle.md#creating-the-jar-file).
+ 2. Tag the repo with the version number. e.g. `v0.1`
+ 2. [Crete a new release using GitHub](https://help.github.com/articles/creating-releases/)
+    and upload the JAR file your created.
+
+### Managing Dependencies
+
+A project often depends on third-party libraries. For example, Task Ninja depends on the
+[Jackson library](http://wiki.fasterxml.com/JacksonHome) for XML parsing. Managing these _dependencies_
+can be automated using Gradle. For example, Gradle can download the dependencies automatically, which
+is better than these alternatives.<br>
+a. Include those libraries in the repo (this bloats the repo size)<br>
+b. Require developers to download those libraries manually (this creates extra work for developers)<br>
 
 
 ## Appendix A : User Stories
@@ -129,7 +208,7 @@ Use case ends.
 
 > 2b1. Delet it with a notice to the user <br>
   Use case ends
- 
+
 #### Use case: View instruction
 
 **MSS**
@@ -147,7 +226,7 @@ Use case ends.
 
 > 3a1. Redo the step 2 again.
   Use case ends
-  
+
 #### Use case: View command meanings
 
 **MSS**
@@ -167,6 +246,7 @@ Use case ends.
 
 **MSS**
 
+<<<<<<< HEAD
 1. User wants the list of tasks
 2. Task Manager shows a list of tasks
 3. Users wants to modify the information of a specific task
@@ -181,7 +261,7 @@ Use case ends.
 
 > 3a1. Task Manager shows an error message <br>
   Use case resumes at step 2
-  
+
 #### Use case: Assign task priority
 
 **MSS**
@@ -206,7 +286,7 @@ Use case ends.
 
 > 4a1. Task Manager set the new event as the top and noticed the user
   Use case ends
-  
+
 #### Use case: View tasks within a time
 
 **MSS**
@@ -224,12 +304,12 @@ Use case ends.
 
 > Task Manager shows an error message <br>
   Use case resumes at step 2
-  
+
 4a. No tasks in such time period
 
 > Task Manager shows that it is empty <br>
   Use case rusumes at step 2
-  
+
 #### Use case: View upcoming tasks
 
 **MSS**
@@ -260,6 +340,3 @@ Use case ends.
 
 
 ## Appendix E : Product Survey
-
-
-
