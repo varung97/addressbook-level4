@@ -24,8 +24,7 @@ So what are you waiting for? Download it now over [here](../../releases). Check 
 
 #### Acknowledgements
 
-* Some parts of this sample application were inspired by the excellent
-  [Java FX tutorial](http://code.makery.ch/library/javafx-8-tutorial/) by *Marco Jakob*.
+* The base code for this application was taken from [Addressbook Level 4](#https://github.com/se-edu/addressbook-level4)
 
 
 #### Licence : [MIT](LICENSE)
