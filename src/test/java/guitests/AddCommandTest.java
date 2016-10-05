@@ -3,14 +3,14 @@ package guitests;
 import guitests.guihandles.TaskCardHandle;
 import org.junit.Test;
 
-import seedu.address.testutil.TestTask;
-import seedu.address.testutil.TestUtil;
 import seedu.manager.commons.core.Messages;
 import seedu.manager.logic.commands.AddCommand;
+import seedu.manager.testutil.TestTask;
+import seedu.manager.testutil.TestUtil;
 
 import static org.junit.Assert.assertTrue;
 
-public class AddCommandTest extends AddressBookGuiTest {
+public class AddCommandTest extends TaskManagerGuiTest {
 
     @Test
     public void add() {
@@ -35,7 +35,7 @@ public class AddCommandTest extends AddressBookGuiTest {
         assertAddSuccess(td.alice);
 
         //invalid command
-        commandBox.runCommand("adds Johnny");
+        commandBox.runCommand("helps Johnny");
         assertResultMessage(Messages.MESSAGE_UNKNOWN_COMMAND);
     }
 

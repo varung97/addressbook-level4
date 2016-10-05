@@ -6,7 +6,7 @@ import seedu.manager.model.task.ReadOnlyTask;
 
 import static org.junit.Assert.assertEquals;
 
-public class SelectCommandTest extends AddressBookGuiTest {
+public class SelectCommandTest extends TaskManagerGuiTest {
 
 
     @Test
@@ -17,6 +17,7 @@ public class SelectCommandTest extends AddressBookGuiTest {
 
         assertSelectionSuccess(1); //first task in the list
         int taskCount = td.getTypicalTasks().length;
+        System.out.println(taskCount);
         assertSelectionSuccess(taskCount); //last task in the list
         int middleIndex = taskCount / 2;
         assertSelectionSuccess(middleIndex); //a task in the middle of the list
