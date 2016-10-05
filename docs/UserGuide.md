@@ -47,8 +47,8 @@ For example, you could search for all tasks to be done before 2pm 1st Oct 2016 b
 
 <a id="help"></a>
 #### Viewing help: `#help`
-Overwhelmed by the amazingness of Task Ninja? Help's here to help you out.<br>
-_Format: `#help [#<command>]`_
+_Overwhelmed by the amazingness of Task Ninja? Help's here to help you out._<br>
+Format: `#help [#<command>]`
 
 > This shows help for all commands<br>
 If a command is specified, then it shows help for that command only<br>
