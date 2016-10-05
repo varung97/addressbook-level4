@@ -66,9 +66,9 @@ Examples:
 _The most basic command... let's you start adding tasks to the manager._<br>
 Format: `#add <task description> [<extensions>]`
 
-> Task description outlines the task to be added.<br>
-Extensions allow specifying more details about the task, such as deadlines and venues. <br>
-Without any timing information, this will be added as a task without a time (a floating task).
+> Task description outlines the task to be added<br>
+Extensions allow specifying more details about the task, such as deadlines and venues<br>
+Without any timing information, this will be added as a task without a time (a floating task)
 
 Examples:
   * `#add Dinner with Arthur`
@@ -89,7 +89,7 @@ Extensions allow filtering the list according to what you wish to see
 Examples:
   * `#search`
   * `#search #before 2pm 30 Oct`
-    * Finds sll tasks that are before the given time
+    * Finds all tasks that are before the given time
   * `#search #after 1am 1 Oct`
     * Finds all tasks that are after the given time
   * `#search #after 1am 1 Oct #before 2pm 30 Oct`
@@ -146,7 +146,8 @@ Examples:
 _Made a mistake? Go back in time using this command!_<br>
 Format: `#undo [<number of changes>]`
 
-> Number of changes is a number specifying how many changes you want to undo. If left out, default is 1 change. Max number of changes that you can undo is 25
+> Number of changes is a number specifying how many changes you want to undo. If left out, default is 1 change<br>
+Max number of changes that you can undo is 25
 
 Examples:
   * `#undo`
@@ -197,9 +198,15 @@ _Prefer shorter or more personalised commands? Alias is here to help you change 
 Format: `#alias #<old command> #<new command>`
 
 Examples:
-  * `#alias #add #+`
-  * `#alias #delete #-`
-  * `#alias #undo #u`
+  * `#alias #add #+`<br>
+    `#+ Dinner with Beeblebrox`
+    * Change `#add` to `#+`, then add new task using this command
+  * `#alias #delete #-`<br>
+    `#- 1`
+    * Change `#delete` to `#-`, then delete 1st task on screen using this command
+  * `#alias #undo #u`<br>
+    `#u 4`
+    * Change `#undo` to `#u`, then undo previous 4 actions using this command
 
 
 <br>
@@ -211,20 +218,21 @@ Format: `#commandchar <new command character>`
 > The character is # by default
 
 Examples:
-  * `#commandchar /`
+  * `#commandchar /`<br>
     `/add Dinner with Mum`
-  * `#commandchar -`
+  * `#commandchar -`<br>
     `-add Dinner with Mum`
 
 
 <br>
 <a id="email"></a>
 #### Specify your email: `#email`
-_Supply the task manager with your email (for reminders)_<br>
+_Supply the task manager with your email (for reminders)._<br>
 Format: `#email <your email id>`
 
 Examples:
   * `#email mileycyrus@weird.com`
+  * `#email arthur@king.com`
 
 
 <br>
@@ -238,12 +246,11 @@ There is no need to save manually.
 
 <a id="at"></a>
 #### At a certain time: `#at`
-_Marks an task/event that will be done/will occur at a certain time._<br>
+_Marks an task/event that will be done at/will occur at a certain time._<br>
 Format: `#at [<time and date>], [<further times and dates>]`
 
-> Time and date together indicate when the event begins. See format [here](#time-date)<br>
-Date indicates the date on which the event is. Defaults to the current day if not specified. See format [here](#date)<br>
-More times and dates can be specified using commas. This allows you to block multiple slots for a task. You can later decide which slot you want to do this in by using the edit command
+> Time and date indicate when the event begins. See format [here](#time-date)<br>
+More times and dates can be specified using commas. This allows you to block multiple slots for a task. You can later decide which slot you want to do this task in by using the [edit](#edit) command
 
 Examples:
   * `#add Submit assignment #at 11:59pm 3 Oct`
@@ -255,11 +262,10 @@ Examples:
 <br>
 <a id="before"></a>
 #### Before a certain time: `#before`
-_Marks a task that must be done before a certain time._<br>
+_Specifies a deadline for a task._<br>
 Format: `#before <time> [<date>]`
 
-> Time indicates what is the last time by which this task should be done. See format [here](#time)<br>
-Date indicates the last date by which this task should be done. Defaults to the current day if not specified. See format [here](#date)
+> Time and date indicate a deadline for the task. See format [here](#time-date)
 
 Examples:
   * `#add Finish 2103T Tutorial #before 1pm`
@@ -273,8 +279,7 @@ Examples:
 _Marks a task that should be done after a certain time._<br>
 Format: `#after <time> [<date>]`
 
-> Time indicates the time after which the task should be done. See format [here](#time)<br>
-Date indicates the date after which the task should be done. Defaults to the current day if not specified. See format [here](#date)
+> Time and date indicate the time after which the task should be done. See format [here](#time-date)
 
 Examples:
   * `#add Pay bills #after 11:50pm 30 Dec 2030`
@@ -303,9 +308,7 @@ Examples:
 _Feeling forgetful? Get reminders using this command._<br>
 Format: `#remind <time> [<date>], [<further times and dates>]`
 
-> Will send you a reminder by email at the time and date specified <br>
-For format of time, see [here](#time)<br>
-For format of date, see [here](#date). Date defaults to the current day if not specified
+> Will send you a reminder by email at the time and date specified. See format [here](#time-date)
 
 Examples:
   * `#add Meeting with Boss #at 1pm #remind 11am`
@@ -333,12 +336,12 @@ Examples:
 _Saves you from having to type in a task multiple times._<br>
 Format: `#repeatevery <number> <time units>`
 
-> Number specifies how often the task should repeat. For example, #repeatevery 3 week would repeat every 3 weeks<br> Time units is one of hours/weeks/months/years
+> Number specifies how often the task should repeat. For example, #repeatevery 3 weeks would repeat every 3 weeks<br> Time units is one of hours/weeks/months/years
 
 Examples:
   * `#add Lunch with Arthur #at 8pm #repeatevery 2 weeks`
   * `#add 2103T Tutorial #at 4pm #repeatevery 1 weeks`
-  * `#edit 1 #repeatevery 1 months`
+  * `#edit 1 #repeatevery 3 months`
 
 
 <br>
@@ -368,14 +371,17 @@ Format: `#sort`
 Examples:
   * `#search #before 7pm #sort`
   * `#search #after 1pm 12 Oct #sort`
-  * `#search #sort` (displays all tasks sorted by priority)
-  * `#sort` (sorts the currently displayed tasks)
+  * `#search #sort`
+    * Displays all tasks sorted by priority
+  * `#sort`
+    * Okay, we lied. You can use `#sort` without primary commands to.
+    * Sorts the currently displayed tasks by priority
 
 
 <br>
 <a id="float"></a>
 #### Search for floating tasks: `#float`
-_Let's you search for floating tasks._<br>
+_Let's you search for floating tasks (tasks with no specified time and date)._<br>
 Format: `#float`
 
 > ONLY works with search<br>
@@ -392,14 +398,16 @@ Examples:
 
 <a id="time-date"></a>
 * `time and date`: `time or date or both`
-  > Formats of time and date are below<br>
+  > Formats of [time](#time) and [date](#date) are below<br>
   Time defaults to 12:01 am if not specified<br>
   Date defaults to the current date if not specified
 
   Examples:
   * `7pm 5 Oct`
-  * `3 Oct` (Stored as `12:01am 3 Oct`)
-  * `1pm` (Stored as `1pm <today's date>`)
+  * `3 Oct`
+    * Stored as `12:01am 3 Oct`
+  * `1pm`
+    * Stored as `1pm <today's date>`
 
 <br>
 <a id="time"></a>
@@ -408,6 +416,7 @@ Examples:
   * `7pm`
   * `3:45am`
   * `1:00pm`
+  * `2:02am`
 
 <br>
 <a id="hour"></a>
