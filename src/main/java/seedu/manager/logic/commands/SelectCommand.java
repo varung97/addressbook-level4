@@ -7,7 +7,7 @@ import seedu.manager.commons.events.ui.JumpToListRequestEvent;
 import seedu.manager.model.task.ReadOnlyTask;
 
 /**
- * Selects a task identified using it's last displayed index from the address book.
+ * Selects a task identified using it's last displayed index from the task manager.
  */
 public class SelectCommand extends Command {
 

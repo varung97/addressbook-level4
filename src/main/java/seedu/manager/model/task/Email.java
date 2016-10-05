@@ -4,7 +4,7 @@ package seedu.manager.model.task;
 import seedu.manager.commons.exceptions.IllegalValueException;
 
 /**
- * Represents a Task's phone number in the address book.
+ * Represents a Task's phone number in the task manager.
  * Guarantees: immutable; is valid as declared in {@link #isValidEmail(String)}
  */
 public class Email {

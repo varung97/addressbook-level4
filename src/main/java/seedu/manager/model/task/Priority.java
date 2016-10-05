@@ -3,7 +3,7 @@ package seedu.manager.model.task;
 import seedu.manager.commons.exceptions.IllegalValueException;
 
 /**
- * Represents a Task's priority in the address book.
+ * Represents a Task's priority in the task manager.
  * Guarantees: immutable; is valid as declared in {@link #isValid(String)}
  */
 public class Priority extends TaskProperty {

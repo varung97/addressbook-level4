@@ -3,7 +3,7 @@ package seedu.manager.model.task;
 import seedu.manager.model.tag.UniqueTagList;
 
 /**
- * A read-only immutable interface for a Task in the addressbook.
+ * A read-only immutable interface for a Task in the taskmanager.
  * Implementations should guarantee: details are present and not null, field values are validated.
  */
 public interface ReadOnlyTask {
