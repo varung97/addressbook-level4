@@ -39,8 +39,8 @@ For example, you could search for all tasks to be done before 2pm 1st Oct 2016 b
 
 <br>
 ### Notation used:
-`[date]`: Means date is an optional argument<br>
-`<hour>`: Replace by the actual hour
+`[date]`: Date is an optional argument<br>
+`<hour>`: Replace with the actual hour
 
 <br>
 ### Primary Commands
