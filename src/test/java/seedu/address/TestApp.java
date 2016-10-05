@@ -2,12 +2,13 @@ package seedu.address;
 
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import seedu.address.commons.core.Config;
-import seedu.address.commons.core.GuiSettings;
-import seedu.address.model.ReadOnlyAddressBook;
-import seedu.address.model.UserPrefs;
-import seedu.address.storage.XmlSerializableAddressBook;
 import seedu.address.testutil.TestUtil;
+import seedu.manager.MainApp;
+import seedu.manager.commons.core.Config;
+import seedu.manager.commons.core.GuiSettings;
+import seedu.manager.model.ReadOnlyAddressBook;
+import seedu.manager.model.UserPrefs;
+import seedu.manager.storage.XmlSerializableAddressBook;
 
 import java.util.function.Supplier;
 

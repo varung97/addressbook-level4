@@ -5,12 +5,17 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
-import seedu.address.commons.events.model.AddressBookChangedEvent;
-import seedu.address.commons.events.storage.DataSavingExceptionEvent;
-import seedu.address.model.AddressBook;
-import seedu.address.model.ReadOnlyAddressBook;
-import seedu.address.model.UserPrefs;
+
 import seedu.address.testutil.TypicalTestTasks;
+import seedu.manager.commons.events.model.AddressBookChangedEvent;
+import seedu.manager.commons.events.storage.DataSavingExceptionEvent;
+import seedu.manager.model.AddressBook;
+import seedu.manager.model.ReadOnlyAddressBook;
+import seedu.manager.model.UserPrefs;
+import seedu.manager.storage.JsonUserPrefsStorage;
+import seedu.manager.storage.Storage;
+import seedu.manager.storage.StorageManager;
+import seedu.manager.storage.XmlAddressBookStorage;
 import seedu.address.testutil.EventsCollector;
 
 import java.io.IOException;

@@ -1,24 +1,28 @@
 package seedu.address.logic;
 
 import com.google.common.eventbus.Subscribe;
+
+import seedu.manager.commons.core.EventsCenter;
+import seedu.manager.commons.events.model.AddressBookChangedEvent;
+import seedu.manager.commons.events.ui.JumpToListRequestEvent;
+import seedu.manager.commons.events.ui.ShowHelpRequestEvent;
+import seedu.manager.logic.Logic;
+import seedu.manager.logic.LogicManager;
+import seedu.manager.logic.commands.*;
+import seedu.manager.model.AddressBook;
+import seedu.manager.model.Model;
+import seedu.manager.model.ModelManager;
+import seedu.manager.model.ReadOnlyAddressBook;
+import seedu.manager.model.tag.Tag;
+import seedu.manager.model.tag.UniqueTagList;
+import seedu.manager.model.task.*;
+import seedu.manager.storage.StorageManager;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
-import seedu.address.commons.core.EventsCenter;
-import seedu.address.logic.commands.*;
-import seedu.address.commons.events.ui.JumpToListRequestEvent;
-import seedu.address.commons.events.ui.ShowHelpRequestEvent;
-import seedu.address.commons.events.model.AddressBookChangedEvent;
-import seedu.address.model.AddressBook;
-import seedu.address.model.Model;
-import seedu.address.model.ModelManager;
-import seedu.address.model.ReadOnlyAddressBook;
-import seedu.address.model.tag.Tag;
-import seedu.address.model.tag.UniqueTagList;
-import seedu.address.model.task.*;
-import seedu.address.storage.StorageManager;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +31,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static seedu.address.commons.core.Messages.*;
+import static seedu.manager.commons.core.Messages.*;
 
 public class LogicManagerTest {
 
