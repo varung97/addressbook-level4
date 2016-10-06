@@ -144,7 +144,7 @@ Likeliness | As a... | I want to... | So that I can...
 `L` | User | Tick off a task | Record that this task is complete
 `L` | User | Search for (a) task(s) | Find (a) task(s) and maybe edit it
 `L` | User | See upcoming tasks | Decide what to do next
-`L` | User | List [floating tasks](#floating-tasks) | See whether I want to complete a floating task next
+`L` | User | List [floating tasks](#floating-task) | See whether I want to complete a floating task next
 `L` | User | Assign priority to tasks | Gauge which task should be done next
 `L` | User | Sort upcoming tasks by priority | Make the decision of which task to complete next faster
 `L` | User | See tasks in a specific period of time | See what has been scheduled for a certain period
