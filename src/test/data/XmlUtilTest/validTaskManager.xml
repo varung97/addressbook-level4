@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <taskmanager>
     <tasks>
-        <name>Hans Muster</name>
+        <desc>Hans Muster</desc>
         <phone isPrivate="false">9482424</phone>
         <time isPrivate="false">hans@google.com</time>
         <priority isPrivate="false">med</priority>
     </tasks>
     <tasks>
-        <name>Ruth Mueller</name>
+        <desc>Ruth Mueller</desc>
         <phone isPrivate="false">87249245</phone>
         <time isPrivate="false">ruth@google.com</time>
         <priority isPrivate="false">high</priority>
     </tasks>
     <tasks>
-        <name>Heinz Kurz</name>
+        <desc>Heinz Kurz</desc>
         <phone isPrivate="false">95352563</phone>
         <time isPrivate="false">heinz@yahoo.com</time>
         <priority isPrivate="false">low</priority>
     </tasks>
     <tasks>
-        <name>Cornelia Meier</name>
+        <desc>Cornelia Meier</desc>
         <phone isPrivate="false">87652533</phone>
         <time isPrivate="false">cornelia@google.com</time>
         <priority isPrivate="false">low</priority>
     </tasks>
     <tasks>
-        <name>Werner Meyer</name>
+        <desc>Werner Meyer</desc>
         <phone isPrivate="false">9482224</phone>
         <time isPrivate="false">werner@gmail.com</time>
         <priority isPrivate="false">med</priority>
     </tasks>
     <tasks>
-        <name>Lydia Kunz</name>
+        <desc>Lydia Kunz</desc>
         <phone isPrivate="false">9482427</phone>
         <time isPrivate="false">lydia@gmail.com</time>
         <priority isPrivate="false">low</priority>
     </tasks>
     <tasks>
-        <name>Anna Best</name>
+        <desc>Anna Best</desc>
         <phone isPrivate="false">9482442</phone>
         <time isPrivate="false">anna@google.com</time>
         <priority isPrivate="false">high</priority>
     </tasks>
     <tasks>
-        <name>Stefan Meier</name>
+        <desc>Stefan Meier</desc>
         <phone isPrivate="false">8482424</phone>
         <time isPrivate="false">stefan@mail.com</time>
         <priority isPrivate="false">high</priority>
     </tasks>
     <tasks>
-        <name>Martin Mueller</name>
+        <desc>Martin Mueller</desc>
         <phone isPrivate="false">8482131</phone>
         <time isPrivate="false">hans@google.com</time>
         <priority isPrivate="false">high</priority>
