@@ -18,6 +18,12 @@ We are a team based in the [School of Computing, National University of Singapor
 
 -----
 
+#### [Zhao Dingfan](https://github.com/e0003506)
+<img src="images/Zhao Dingfan.png" width="150"><br><br>
+**Role**: <br>
+**Responsibilities**:
+
+-----
 #### [Leow Yijin](http://github.com/yijinl)
 <img src="images/LeowYijin.jpg" width="150"><br><br>
 **Role**: <br>
