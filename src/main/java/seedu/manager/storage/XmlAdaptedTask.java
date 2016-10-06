@@ -40,7 +40,7 @@ public class XmlAdaptedTask {
      */
     public XmlAdaptedTask(ReadOnlyTask source) {
         desc = source.getDesc().getValue();
-        venue = source.getVenue().value;
+        venue = source.getVenue().getValue();
         time = source.getTime().getValue();
         priority = source.getPriority().getValue();
         tagged = new ArrayList<>();
