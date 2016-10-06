@@ -1,6 +1,8 @@
 # Developer Guide
 
 * [Setting Up](#setting-up)
+* [Testing](#testing)
+* [Dev Ops](#dev-ops)
 * [Appendix A: User Stories](#appendix-a--user-stories)
 * [Appendix B: Use Cases](#appendix-b--use-cases)
 * [Appendix C: Non Functional Requirements](#appendix-c--non-functional-requirements)
@@ -48,12 +50,6 @@
 **Problem: Eclipse reports some required libraries missing**
 * Reason: Required libraries may not have been downloaded during the project import.
 * Solution: [Run tests using Gardle](UsingGradle.md) once (to refresh the libraries).
-
-
-### Configuration
-
-Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file
-(default: `config.json`).
 
 
 ## Testing
