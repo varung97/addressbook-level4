@@ -8,7 +8,7 @@ import seedu.manager.model.task.*;
  */
 public class TestTask implements ReadOnlyTask {
 
-    private Name name;
+    private Desc desc;
     private Priority priority;
     private Email email;
     private Phone phone;
@@ -18,8 +18,8 @@ public class TestTask implements ReadOnlyTask {
         tags = new UniqueTagList();
     }
 
-    public void setName(Name name) {
-        this.name = name;
+    public void setDesc(Desc desc) {
+        this.desc = desc;
     }
 
     public void setPriority(Priority priority) {
@@ -35,8 +35,8 @@ public class TestTask implements ReadOnlyTask {
     }
 
     @Override
-    public Name getName() {
-        return name;
+    public Desc getDesc() {
+        return desc;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class TestTask implements ReadOnlyTask {
 
     public String getAddCommand() {
         StringBuilder sb = new StringBuilder();
-        sb.append("add " + this.getName().fullName + " ");
+        sb.append("add " + this.getDesc().getValue() + " ");
         sb.append("p/" + this.getPhone().value + " ");
         sb.append("e/" + this.getEmail().value + " ");
         sb.append("a/" + this.getPriority().getValue() + " ");

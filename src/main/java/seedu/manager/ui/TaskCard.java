@@ -13,7 +13,7 @@ public class TaskCard extends UiPart{
     @FXML
     private HBox cardPane;
     @FXML
-    private Label name;
+    private Label desc;
     @FXML
     private Label id;
     @FXML
@@ -41,7 +41,7 @@ public class TaskCard extends UiPart{
 
     @FXML
     public void initialize() {
-        name.setText(task.getName().fullName);
+        desc.setText(task.getDesc().getValue());
         id.setText(displayedIndex + ". ");
         phone.setText(task.getPhone().value);
         priority.setText(task.getPriority().getValue());
