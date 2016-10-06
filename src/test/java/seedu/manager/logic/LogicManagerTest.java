@@ -156,7 +156,7 @@ public class LogicManagerTest {
         assertCommandBehavior(
                 "add wrong args wrong args", expectedMessage);
         assertCommandBehavior(
-                "add Valid Desc 12345 e/valid@time.butNoPhonePrefix a/med", expectedMessage);
+                "add Valid Desc 12345 e/valid@time.butNoVenuePrefix a/med", expectedMessage);
         assertCommandBehavior(
                 "add Valid Desc p/12345 valid@time.butNoPrefix a/low", expectedMessage);
         assertCommandBehavior(
@@ -168,7 +168,7 @@ public class LogicManagerTest {
         assertCommandBehavior(
                 "add []\\[;] p/12345 e/valid@e.mail a/low", Desc.MESSAGE_DESC_CONSTRAINTS);
         assertCommandBehavior(
-                "add Valid Desc p/not_numbers e/valid@e.mail a/low", Phone.MESSAGE_PHONE_CONSTRAINTS);
+                "add Valid Desc p/not_numbers e/valid@e.mail a/low", Venue.MESSAGE_VENUE_CONSTRAINTS);
 //        assertCommandBehavior(
 //                "add Valid Desc p/12345 e/notAnTime a/med", Time.MESSAGE_CONSTRAINTS);
         assertCommandBehavior(
@@ -388,13 +388,13 @@ public class LogicManagerTest {
 
         Task adam() throws Exception {
             Desc desc = new Desc("Adam Brown");
-            Phone privatePhone = new Phone("111111");
+            Venue privateVenue = new Venue("111111");
             Time time = new Time("adam@gmail.com");
             Priority privatePriority = new Priority("med");
             Tag tag1 = new Tag("tag1");
             Tag tag2 = new Tag("tag2");
             UniqueTagList tags = new UniqueTagList(tag1, tag2);
-            return new Task(desc, privatePhone, time, privatePriority, tags);
+            return new Task(desc, privateVenue, time, privatePriority, tags);
         }
 
         /**
@@ -407,7 +407,7 @@ public class LogicManagerTest {
         Task generateTask(int seed) throws Exception {
             return new Task(
                     new Desc("Task " + seed),
-                    new Phone("" + Math.abs(seed)),
+                    new Venue("" + Math.abs(seed)),
                     new Time(seed + "@time"),
                     new Priority(new String[] {"low", "med", "high"}[seed % 3]),
                     new UniqueTagList(new Tag("tag" + Math.abs(seed)), new Tag("tag" + Math.abs(seed + 1)))
@@ -421,7 +421,7 @@ public class LogicManagerTest {
             cmd.append("add ");
 
             cmd.append(p.getDesc().toString());
-            cmd.append(" p/").append(p.getPhone());
+            cmd.append(" p/").append(p.getVenue());
             cmd.append(" e/").append(p.getTime());
             cmd.append(" a/").append(p.getPriority());
 
@@ -506,7 +506,7 @@ public class LogicManagerTest {
         Task generateTaskWithDesc(String desc) throws Exception {
             return new Task(
                     new Desc(desc),
-                    new Phone("1"),
+                    new Venue("1"),
                     new Time("1@time"),
                     new Priority("low"),
                     new UniqueTagList(new Tag("tag"))

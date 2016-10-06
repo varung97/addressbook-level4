@@ -11,7 +11,7 @@ import seedu.manager.model.task.ReadOnlyTask;
 public class TaskCardHandle extends GuiHandle {
     private static final String DESC_FIELD_ID = "#desc";
     private static final String PRIORITY_FIELD_ID = "#priority";
-    private static final String PHONE_FIELD_ID = "#phone";
+    private static final String VENUE_FIELD_ID = "#venue";
     private static final String TIME_FIELD_ID = "#time";
 
     private Node node;
@@ -33,8 +33,8 @@ public class TaskCardHandle extends GuiHandle {
         return getTextFromLabel(PRIORITY_FIELD_ID);
     }
 
-    public String getPhone() {
-        return getTextFromLabel(PHONE_FIELD_ID);
+    public String getVenue() {
+        return getTextFromLabel(VENUE_FIELD_ID);
     }
 
     public String getTime() {
@@ -42,7 +42,7 @@ public class TaskCardHandle extends GuiHandle {
     }
 
     public boolean isSameTask(ReadOnlyTask task){
-        return getFullDesc().equals(task.getDesc().getValue()) && getPhone().equals(task.getPhone().value)
+        return getFullDesc().equals(task.getDesc().getValue()) && getVenue().equals(task.getVenue().value)
                 && getTime().equals(task.getTime().getValue()) && getPriority().equals(task.getPriority().getValue());
     }
 

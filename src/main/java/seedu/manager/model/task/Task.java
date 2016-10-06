@@ -12,7 +12,7 @@ import seedu.manager.model.tag.UniqueTagList;
 public class Task implements ReadOnlyTask {
 
     private Desc desc;
-    private Phone phone;
+    private Venue venue;
     private Time time;
     private Priority priority;
 
@@ -21,9 +21,9 @@ public class Task implements ReadOnlyTask {
     /**
      * Every field must be present and not null.
      */
-    public Task(Desc desc, Phone phone, Time time, Priority priority, UniqueTagList tags) {
-        assert !CollectionUtil.isAnyNull(desc, phone, time, priority, tags);
-        this.phone = phone;
+    public Task(Desc desc, Venue venue, Time time, Priority priority, UniqueTagList tags) {
+        assert !CollectionUtil.isAnyNull(desc, venue, time, priority, tags);
+        this.venue = venue;
         this.desc = desc;
         this.time = time;
         this.priority = priority;
@@ -34,7 +34,7 @@ public class Task implements ReadOnlyTask {
      * Copy constructor.
      */
     public Task(ReadOnlyTask source) {
-        this(source.getDesc(), source.getPhone(), source.getTime(), source.getPriority(), source.getTags());
+        this(source.getDesc(), source.getVenue(), source.getTime(), source.getPriority(), source.getTags());
     }
 
     @Override
@@ -43,8 +43,8 @@ public class Task implements ReadOnlyTask {
     }
 
     @Override
-    public Phone getPhone() {
-        return phone;
+    public Venue getVenue() {
+        return venue;
     }
 
     @Override
@@ -79,7 +79,7 @@ public class Task implements ReadOnlyTask {
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(desc, phone, time, priority, tags);
+        return Objects.hash(desc, venue, time, priority, tags);
     }
 
     @Override
