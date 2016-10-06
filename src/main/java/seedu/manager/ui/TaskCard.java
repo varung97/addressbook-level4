@@ -45,7 +45,7 @@ public class TaskCard extends UiPart{
         id.setText(displayedIndex + ". ");
         phone.setText(task.getPhone().value);
         priority.setText(task.getPriority().getValue());
-        time.setText(task.getTime().value);
+        time.setText(task.getTime().getValue());
         tags.setText(task.tagsString());
     }
 

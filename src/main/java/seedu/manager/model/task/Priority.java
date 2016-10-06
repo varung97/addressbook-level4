@@ -7,8 +7,8 @@ import seedu.manager.commons.exceptions.IllegalValueException;
  * Guarantees: immutable; is valid as declared in {@link #isValid(String)}
  */
 public class Priority extends TaskProperty {
-    public static final String MESSAGE_CONSTRAINTS = "Task priorities should be either low, med or high";
-    public static final String VALIDATION_REGEX = ".+";
+    public static final String MESSAGE_PRIORITY_CONSTRAINTS = "Task priorities should be either low, med or high";
+    public static final String PRIORITY_VALIDATION_REGEX = ".+";
     
     /**
      * Validates given priority.
@@ -16,17 +16,7 @@ public class Priority extends TaskProperty {
      * @throws IllegalValueException if given priority string is invalid.
      */
     public Priority(String priority) throws IllegalValueException {
-        super(priority);
-    }
-    
-    @Override
-    protected String getMessageConstraints() {
-        return MESSAGE_CONSTRAINTS;
-    }
-    
-    @Override
-    protected String getValidationRegex() {
-        return VALIDATION_REGEX;
+        super(priority, PRIORITY_VALIDATION_REGEX, MESSAGE_PRIORITY_CONSTRAINTS);
     }
 
     @Override
@@ -40,10 +30,4 @@ public class Priority extends TaskProperty {
                 || (other instanceof Priority // instanceof handles nulls
                 && this.value.equals(((Priority) other).value)); // state check
     }
-
-    @Override
-    public int hashCode() {
-        return value.hashCode();
-    }
-
 }

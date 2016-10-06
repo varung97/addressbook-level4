@@ -41,7 +41,7 @@ public class XmlAdaptedTask {
     public XmlAdaptedTask(ReadOnlyTask source) {
         desc = source.getDesc().getValue();
         phone = source.getPhone().value;
-        time = source.getTime().value;
+        time = source.getTime().getValue();
         priority = source.getPriority().getValue();
         tagged = new ArrayList<>();
         for (Tag tag : source.getTags()) {

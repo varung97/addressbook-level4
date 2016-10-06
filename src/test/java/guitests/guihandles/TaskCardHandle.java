@@ -43,7 +43,7 @@ public class TaskCardHandle extends GuiHandle {
 
     public boolean isSameTask(ReadOnlyTask task){
         return getFullDesc().equals(task.getDesc().getValue()) && getPhone().equals(task.getPhone().value)
-                && getTime().equals(task.getTime().value) && getPriority().equals(task.getPriority().getValue());
+                && getTime().equals(task.getTime().getValue()) && getPriority().equals(task.getPriority().getValue());
     }
 
     @Override
