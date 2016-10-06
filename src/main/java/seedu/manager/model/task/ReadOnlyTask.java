@@ -10,7 +10,7 @@ public interface ReadOnlyTask {
 
     Name getName();
     Phone getPhone();
-    Email getEmail();
+    Time getTime();
     Priority getPriority();
 
     /**
@@ -27,7 +27,7 @@ public interface ReadOnlyTask {
                 || (other != null // this is first to avoid NPE below
                 && other.getName().equals(this.getName()) // state checks here onwards
                 && other.getPhone().equals(this.getPhone())
-                && other.getEmail().equals(this.getEmail())
+                && other.getTime().equals(this.getTime())
                 && other.getPriority().equals(this.getPriority()));
     }
 
@@ -39,8 +39,8 @@ public interface ReadOnlyTask {
         builder.append(getName())
                 .append(" Phone: ")
                 .append(getPhone())
-                .append(" Email: ")
-                .append(getEmail())
+                .append(" Time: ")
+                .append(getTime())
                 .append(" Priority: ")
                 .append(getPriority())
                 .append(" Tags: ");

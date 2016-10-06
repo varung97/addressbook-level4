@@ -21,7 +21,7 @@ public class TaskCard extends UiPart{
     @FXML
     private Label priority;
     @FXML
-    private Label email;
+    private Label time;
     @FXML
     private Label tags;
 
@@ -45,7 +45,7 @@ public class TaskCard extends UiPart{
         id.setText(displayedIndex + ". ");
         phone.setText(task.getPhone().value);
         priority.setText(task.getPriority().getValue());
-        email.setText(task.getEmail().value);
+        time.setText(task.getTime().value);
         tags.setText(task.tagsString());
     }
 

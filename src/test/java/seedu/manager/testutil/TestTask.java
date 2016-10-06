@@ -10,7 +10,7 @@ public class TestTask implements ReadOnlyTask {
 
     private Name name;
     private Priority priority;
-    private Email email;
+    private Time time;
     private Phone phone;
     private UniqueTagList tags;
 
@@ -26,8 +26,8 @@ public class TestTask implements ReadOnlyTask {
         this.priority = priority;
     }
 
-    public void setEmail(Email email) {
-        this.email = email;
+    public void setTime(Time time) {
+        this.time = time;
     }
 
     public void setPhone(Phone phone) {
@@ -45,8 +45,8 @@ public class TestTask implements ReadOnlyTask {
     }
 
     @Override
-    public Email getEmail() {
-        return email;
+    public Time getTime() {
+        return time;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class TestTask implements ReadOnlyTask {
         StringBuilder sb = new StringBuilder();
         sb.append("add " + this.getName().fullName + " ");
         sb.append("p/" + this.getPhone().value + " ");
-        sb.append("e/" + this.getEmail().value + " ");
+        sb.append("e/" + this.getTime().value + " ");
         sb.append("a/" + this.getPriority().getValue() + " ");
         this.getTags().getInternalList().stream().forEach(s -> sb.append("t/" + s.tagName + " "));
         return sb.toString();

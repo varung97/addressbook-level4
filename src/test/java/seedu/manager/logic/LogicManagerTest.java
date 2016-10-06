@@ -156,11 +156,11 @@ public class LogicManagerTest {
         assertCommandBehavior(
                 "add wrong args wrong args", expectedMessage);
         assertCommandBehavior(
-                "add Valid Name 12345 e/valid@email.butNoPhonePrefix a/med", expectedMessage);
+                "add Valid Name 12345 e/valid@time.butNoPhonePrefix a/med", expectedMessage);
         assertCommandBehavior(
-                "add Valid Name p/12345 valid@email.butNoPrefix a/low", expectedMessage);
+                "add Valid Name p/12345 valid@time.butNoPrefix a/low", expectedMessage);
         assertCommandBehavior(
-                "add Valid Name p/12345 e/valid@email.butNoAddressPrefix low", expectedMessage);
+                "add Valid Name p/12345 e/valid@time.butNoAddressPrefix low", expectedMessage);
     }
 
     @Test
@@ -170,7 +170,7 @@ public class LogicManagerTest {
         assertCommandBehavior(
                 "add Valid Name p/not_numbers e/valid@e.mail a/low", Phone.MESSAGE_PHONE_CONSTRAINTS);
         assertCommandBehavior(
-                "add Valid Name p/12345 e/notAnEmail a/med", Email.MESSAGE_EMAIL_CONSTRAINTS);
+                "add Valid Name p/12345 e/notAnTime a/med", Time.MESSAGE_TIME_CONSTRAINTS);
         assertCommandBehavior(
                 "add Valid Name p/12345 e/valid@e.mail a/med t/invalid_-[.tag", Tag.MESSAGE_TAG_CONSTRAINTS);
 
@@ -389,12 +389,12 @@ public class LogicManagerTest {
         Task adam() throws Exception {
             Name name = new Name("Adam Brown");
             Phone privatePhone = new Phone("111111");
-            Email email = new Email("adam@gmail.com");
+            Time time = new Time("adam@gmail.com");
             Priority privatePriority = new Priority("med");
             Tag tag1 = new Tag("tag1");
             Tag tag2 = new Tag("tag2");
             UniqueTagList tags = new UniqueTagList(tag1, tag2);
-            return new Task(name, privatePhone, email, privatePriority, tags);
+            return new Task(name, privatePhone, time, privatePriority, tags);
         }
 
         /**
@@ -408,7 +408,7 @@ public class LogicManagerTest {
             return new Task(
                     new Name("Task " + seed),
                     new Phone("" + Math.abs(seed)),
-                    new Email(seed + "@email"),
+                    new Time(seed + "@time"),
                     new Priority(new String[] {"low", "med", "high"}[seed % 3]),
                     new UniqueTagList(new Tag("tag" + Math.abs(seed)), new Tag("tag" + Math.abs(seed + 1)))
             );
@@ -422,7 +422,7 @@ public class LogicManagerTest {
 
             cmd.append(p.getName().toString());
             cmd.append(" p/").append(p.getPhone());
-            cmd.append(" e/").append(p.getEmail());
+            cmd.append(" e/").append(p.getTime());
             cmd.append(" a/").append(p.getPriority());
 
             UniqueTagList tags = p.getTags();
@@ -507,7 +507,7 @@ public class LogicManagerTest {
             return new Task(
                     new Name(name),
                     new Phone("1"),
-                    new Email("1@email"),
+                    new Time("1@time"),
                     new Priority("low"),
                     new UniqueTagList(new Tag("tag"))
             );
